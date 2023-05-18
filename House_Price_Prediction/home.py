@@ -26,40 +26,11 @@ bath=st.number_input('Number of Bathrooms')
 bol=st.number_input('Number of Balconys')
 
 if st.button('Predict Price'):
-    if(0):
-        query=np.array([Area,aval,size,sqft,bath,bol,loc])
-        query=query.reshape(1,7)
+    
+    query=np.array([Area,aval,size,sqft,bath,bol,loc])
+    query=query.reshape(1,7)
 
-        st.title("The predicted price is :"+str(int(np.exp(G_model.predict(query)[0]))))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    st.title("The predicted price is :76.00 lakhs")
-
-
-
+    st.title("The predicted price is :"+str(int(np.exp(G_model.predict(query)[0]))))
 
 
 
